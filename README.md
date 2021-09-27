@@ -2,7 +2,9 @@
 
 Java Programming - NTU
 
-Week 1: Lab1\\...
+Week 1: 
+
+    + Lab1\\...
 
 Week 2:
 
