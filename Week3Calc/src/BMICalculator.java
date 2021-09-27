@@ -38,7 +38,7 @@ public class BMICalculator extends JFrame {
 		add(lblHeight);
 		add(txtHeight);
 		add(lblWeight);
-		add(txtWeight);		
+		add(txtWeight);
 		add(btnCalc);
 		add(pnlResults);
 
@@ -102,8 +102,12 @@ public class BMICalculator extends JFrame {
 			bmi = w / Math.pow(h / 100, 2);
 			
 			txtBMI.setText(String.format("%.1f", bmi));
-
-			if (bmi < 18.5)
+			
+			if ((Double.isNaN(bmi)) || (Double.isInfinite(bmi)) || bmi == 0) {
+				txtBMI.setText("Invalid BMI");
+				txtType.setText("Invalid BMI");
+			}
+			else if (bmi < 18.5)
 				txtType.setText("Underweight");
 			else if (bmi < 25)
 				txtType.setText("Normal");
