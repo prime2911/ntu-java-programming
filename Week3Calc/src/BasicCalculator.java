@@ -102,7 +102,10 @@ public class BasicCalculator extends JFrame {
 			}
 
 			if (calcOp == btnDiv) {
-				txtResult.setText(String.valueOf(a / b));
+				if ((Double.isNaN(a / b)) || (Double.isInfinite(a / b)))
+					txtResult.setText("Invalid Calculation");
+				else
+					txtResult.setText(String.valueOf(a / b));
 			}
 		}
 
