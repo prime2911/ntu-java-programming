@@ -86,21 +86,18 @@ public class BMICalculator extends JFrame {
 			double h, w, bmi;
 
 			try {
-				h = Double.parseDouble(strHeight);
+				h = negativeCheck(Double.parseDouble(strHeight));
 			} catch (Exception ex) {
 				h = 0;
 				txtHeight.setText("Invalid input! Value defaulted to 0.");
 			}
 			
 			try {
-				w = Double.parseDouble(strWeight);
+				w = negativeCheck(Double.parseDouble(strWeight));
 			} catch (Exception ex) {
 				w = 0;
 				txtWeight.setText("Invalid input! Value defaulted to 0.");
 			}
-
-			negativeCheck(h);
-			negativeCheck(w);
 
 			bmi = w / Math.pow(h / 100, 2);
 			
