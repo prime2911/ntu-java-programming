@@ -9,5 +9,9 @@ Week 1:
 Week 2:
 
     + GUI_SumCalc\...
+
+Week 3:
     
     + GUI_SumCalc2\...
+    
+    + Week3Calc\...
