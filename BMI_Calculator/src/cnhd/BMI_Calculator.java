@@ -65,7 +65,9 @@ public class BMI_Calculator {
 	private void initialize() {
 		frmBmiCalculator = new JFrame();
 		frmBmiCalculator.setTitle("BMI Calculator");
-		frmBmiCalculator.setBounds(100, 100, 450, 500);
+//		frmBmiCalculator.setBounds(100, 100, 450, 500);
+		frmBmiCalculator.setSize(400, 400);
+		frmBmiCalculator.setLocationRelativeTo(null);
 		frmBmiCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JLabel lblHeight = new JLabel("Height (cm)");
