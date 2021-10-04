@@ -66,7 +66,7 @@ public class BMI_Calculator {
 		frmBmiCalculator = new JFrame();
 		frmBmiCalculator.setTitle("BMI Calculator");
 //		frmBmiCalculator.setBounds(100, 100, 450, 500);
-		frmBmiCalculator.setSize(400, 400);
+		frmBmiCalculator.setSize(450, 500);
 		frmBmiCalculator.setLocationRelativeTo(null);
 		frmBmiCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
