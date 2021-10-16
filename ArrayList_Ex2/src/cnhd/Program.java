@@ -146,6 +146,8 @@ public class Program {
 		textAreaProdList.setBorder(new LineBorder(new Color(0, 0, 0)));
 		textAreaProdList.setFont(new Font("Monospaced", Font.PLAIN, 14));
 		textAreaProdList.setBounds(35, 178, 405, 208);
+		textAreaProdList.setText("ID --- Name --- Price\n");
+		
 		mainFrame.getContentPane().add(textAreaProdList);
 	}
 
@@ -160,13 +162,13 @@ public class Program {
 			price = Integer.parseInt(price_text);
 		} catch (Exception ex) {
 			price = 0;
-			txtPrice.setText("Invalid input! Value defaulted to 0.");
+			txtPrice.setText("");
 		}
 		
-		if(checkId(id))
-			arr.add(new Product(id, name, price));
+		if(!(checkId(id)) || (id.equals("")) || (id.contains(" ")))
+			showDialog("Invalid product ID!", "Warning!", JOptionPane.ERROR_MESSAGE);
 		else
-			showDialog("Item already exists!", "Warning!", JOptionPane.ERROR_MESSAGE);	
+			arr.add(new Product(id, name, price));
 		
 		displayList(arr);
 		
@@ -214,7 +216,7 @@ public class Program {
 	}
 
 	private void displayList(List<Product> arr) {
-		textAreaProdList.setText("");
+		textAreaProdList.setText("ID --- Name --- Price\n");
 
 		for (Product element : arr) {
 			textAreaProdList.append(element.getId() + " --- " + element.getName() + " --- " + element.getPrice() + "\n");
