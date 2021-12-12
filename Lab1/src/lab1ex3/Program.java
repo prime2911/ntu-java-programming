@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Program {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		double side;
 		Scanner userInput = new Scanner(System.in);

@@ -3,6 +3,7 @@ package cao_nguyen_hai_duy;
 import java.awt.*;
 import java.awt.event.*;
 
+@SuppressWarnings("serial")
 public class MainWindow extends Frame {
 	TextField txtA, txtB, txtSum;
 	Label lblA, lblB, lblSum;
